@@ -18,9 +18,29 @@ try {
    
    $mail->Subject = 'Force';
    
-   $mail->Body = 'There is a great disturbance in the Force.';
+$mail->isHTML(TRUE);
+$mail->Body = '<html>There is a great disturbance in the <strong>Force</strong>.</html>';
+$mail->AltBody = 'There is a great disturbance in the Force.';
+    $mail->isSMTP();
    
+   
+   $mail->Host = 'smtp.empire.com';
+   
+   $mail->SMTPAuth = TRUE;
+   
+   
+   $mail->SMTPSecure = 'tls';
+   
+   
+   $mail->Username = 'smtp@empire.com';
+   
+   
+   $mail->Password = 'iamyourfather';
+   
+   
+   $mail->Port = 587;
    $mail->send();
+	$mail->SMTPDebug = 4;
 }
 catch (Exception $e)
 {
