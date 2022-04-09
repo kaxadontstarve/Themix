@@ -10,10 +10,12 @@
 	$sendMessage->setLanguage('uk', 'phpmailer/language/');
 	$sendMessage->IsHTML(true);
 
-	//От кого письмо
-	$sendMessage->setFrom('themix@gmail.com', 'Фрилансер по жизни');
 	//Кому отправить
 	$sendMessage->addAddress('kaxa0308super@gmail.com');
+
+	//От кого письмо
+	$sendMessage->setFrom('themix@gmail.com', 'Фрилансер по жизни');
+
 	//Тема письма
 	$sendMessage->Subject = 'Привет! Это "Фрилансер по жизни"';
 
