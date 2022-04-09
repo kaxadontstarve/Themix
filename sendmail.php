@@ -1,15 +1,34 @@
 <?php
-$from = 'Darth Vader <darth@empire.com>';
-$to = 'Emperor <palpatine@empire.com>';
-$subject = 'Force';
-$message = 'There is a great disturbance in the Force.';
-$headers = 'From: ' . $from;
- 
-if (!mail($to, $subject, $message, $headers))
-{
-    echo "Error.";
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+	require "PHPMailer/Exception.php";
+	require "PHPMailer/PHPMailer.php";
+
+
+
+$mail = new PHPMailer(TRUE);
+
+try {
+   
+   $mail->setFrom('darth@empire.com', 'Darth Vader');
+   
+   $mail->addAddress('palpatine@empire.com', 'Emperor');
+   
+   $mail->Subject = 'Force';
+   
+   $mail->Body = 'There is a great disturbance in the Force.';
+   
+   $mail->send();
 }
-else
+catch (Exception $e)
 {
-    echo "Message sent.";
+   
+   echo $e->errorMessage();
+}
+catch (\Exception $e)
+{
+   
+   echo $e->getMessage();
 }
