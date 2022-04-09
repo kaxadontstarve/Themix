@@ -1,14 +1,11 @@
 <?php
 	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
 
-	require "PHPMailer/src/Exception.php";
-	require "PHPMailer/src/PHPMailer.php";
+	require "PHPMailer/Exception.php";
+	require "PHPMailer/PHPMailer.php";
 
 	$sendMessage = new PHPMailer(true);
 	$sendMessage->CharSet = 'UTF-8';
-	$sendMessage->setLanguage('uk', 'PHPMailer/language/');
-	$sendMessage->IsHTML(true);
 	$name = $_POST["name"];
 	$login = $_POST["login"];
 	$password1 = $_POST["password1"];
