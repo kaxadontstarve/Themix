@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				body: formData
 			});
 			alert(response.ok);
-			/*
 			if (response.ok) {
 				let result = await response.json();
 				alert(result.message);
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			} else {
 				alert("Ошибка");
 				form.classList.remove('_sending');
-			}*/
+			}
 		} else {
 			alert('Заполните обязательные поля');
 		}
