@@ -13,8 +13,8 @@
 
 	$body = $name. ' ' .$login. ' ' .$password1. ' ' .$password2.;
 	$sendMessage->Subject = 'Привет! Это "Фрилансер по жизни';
-
-	$sendMessage->addAddress('kaxa0308super@gmail.com');
+	$sendMessage->setFrom('example@guru.dut', 'Darth Vader');
+	$sendMessage->addAddress('kaxa0308super@gmail.com', 'Emperor');
 	$sendMessage->Body = $body;
 
 	$sendMessage->send();
