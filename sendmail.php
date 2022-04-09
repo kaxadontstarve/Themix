@@ -1,21 +1,15 @@
 <?php
-	use PHPMailer\PHPMailer\PHPMailer;
-
-	require "PHPMailer/Exception.php";
-	require "PHPMailer/PHPMailer.php";
-	require "PHPMailer/SMTP.php";		
-	$sendMessage = new PHPMailer(true);
-	$sendMessage->CharSet = 'UTF-8';
-	$name = $_POST["name"];
-	$login = $_POST["login"];
-	$password1 = $_POST["password1"];
-	$password2 = $_POST["password2"];
-
-	$body = $name. ' ' .$login. ' ' .$password1. ' ' .$password2.;
-	$sendMessage->Subject = 'Привет! Это "Фрилансер по жизни';
-	$sendMessage->setFrom('example@guru.dut', 'Darth Vader');
-	$sendMessage->addAddress('kaxa0308super@gmail.com', 'Emperor');
-	$sendMessage->Body = $body;
-
-	$sendMessage->send();
-?>
+$from = 'Darth Vader <darth@empire.com>';
+$to = 'Emperor <palpatine@empire.com>';
+$subject = 'Force';
+$message = 'There is a great disturbance in the Force.';
+$headers = 'From: ' . $from;
+ 
+if (!mail($to, $subject, $message, $headers))
+{
+    echo "Error.";
+}
+else
+{
+    echo "Message sent.";
+}
