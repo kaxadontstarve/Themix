@@ -16,15 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
             let response = await fetch('sendmail.php',{
                 method: 'POST',
                 body: formData
+                
             });
-            if (response.ok) {
+            alert(response.ok);
+           /* if (response.ok) {
                 let result = await response.json();
                 alert(result.message); 
+                form.reset();
                 form.classList.remove('_sending');
+                
              }else{
                  alert('Ошибка');
                  form.classList.remove('_sending');
-             }
+             }*/
         }else{
             alert('Заповніть обов`язкові поля');
         }
