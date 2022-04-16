@@ -1,0 +1,298 @@
+.hat {
+	background: black;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 102px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.hat__content {
+	position: absolute;
+	left: 46.25%;
+}
+
+.hat__logo {
+	width: 130px;
+	height: 120px;
+	text-align: center;
+}
+.menu{
+	opacity: 0.3;
+	transition: 1s;
+}
+.menu:hover{
+	transition: 1s;
+	opacity: 1;
+}
+
+.menu__point {
+	margin: 0px;
+	font-size: 20px;
+	text-decoration: none;
+	background: #161936;
+	padding: 10px;
+	color: #516E7A;
+	transition: 0.8s;
+
+}
+.menu__point:hover{
+text-shadow: rgb(255, 255, 255) 1px 0 10px;
+transition: 0.3s;
+
+}
+.menu__point:active{
+border: solid #161936 8px;
+
+}
+.menu__point:visited {
+
+	text-decoration: none;
+	color: #516E7A;
+}
+
+.menu__point__put {
+	font-size: 20px;
+	text-decoration: none;
+	padding: 10px;
+	background: #506F65;
+	color: white;
+}
+.menu__point__put:hover {
+color: #7cc7af94;
+transition: 0.3s;
+}
+.menu__point__put:visited {
+	margin: 10px;
+	text-decoration: none;
+	color: white;
+}
+
+.block__img {
+	position: absolute;
+	border: solid #516E7A;
+	margin: 10px;
+	width: 120px;
+	height: 120px;
+	border-radius: 6px;
+	animation: anim 0.8s;
+	transition: 0.8s;
+}
+
+.block__img:hover {
+	border: solid #a6bdc7;
+	transition: 0.8s;
+}
+
+.img1 {
+	left: 0px;
+	animation: translate1 0.8s;
+}
+
+.img2 {
+	animation: translate2 0.8s;
+	left: 140px;
+}
+
+.img3 {
+	animation: translate3 0.8s;
+	left: 280px;
+}
+
+.img4 {
+	animation: translate4 0.8s;
+	left: 420px;
+
+}
+
+.img5 {
+	animation: translate1 0.8s;
+	left: 0px;
+	top: 450px;
+}
+
+.img6 {
+	animation: translate2 0.8s;
+	left: 140px;
+	top: 450px;
+}
+
+.img7 {
+	animation: translate3 0.8s;
+	left: 280px;
+	top: 450px;
+}
+
+.img8 {
+	animation: translate4 0.8s;
+	left: 420px;
+	top: 450px;
+}
+
+.block__title {
+	position: absolute;
+	top: 405px;
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup.open .popup__content {
+	opacity: 1;
+	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+}
+
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 10px;
+
+}
+
+.popup__content {
+	border-radius: 10px;
+	background-color: #516E7A;
+	color: #000;
+	max-width: 800px;
+	padding: 30px;
+	position: relative;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__closed {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: #516E7A;
+	border: solid #516E7A;
+	border-radius: 2px;
+	text-decoration: none;
+	background: #161936;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+}
+
+.popup__title {
+	font-size: 40px;
+	margin: 0px 0px 1em 0px;
+}
+
+.popup__text {
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	display: flex;
+}
+
+.popup__submit {
+	color: #fff;
+	background-color: #516E7A;
+	border: solid #fff;
+	border-radius: 2px;
+	font-size: 20px;
+}
+.popup__symbol {
+color: #fff;
+}
+.popup__img {
+	border: solid #344247;
+	margin: 10px;
+	width: 120px;
+	height: 120px;
+	border-radius: 6px;
+	animation: anim 0.8s;
+	transition: 0.8s;
+}
+body {
+	color: #556D7A;
+	font-size: 20px;
+	font-family: Elephant;
+	background: repeat url(images/Фон.jpg);
+	background-size: 100% 670px;
+	overflow-x: hidden;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.center {
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	display: block;
+}
+
+@keyframes translate1 {
+	0% {
+
+		left: 120%;
+	}
+
+	100% {
+		left: 0px;
+	}
+}
+
+@keyframes translate2 {
+	0% {
+
+		left: 120%;
+	}
+
+	100% {
+		left: 140px;
+	}
+}
+
+@keyframes translate3 {
+	0% {
+
+		left: 120%;
+	}
+
+	100% {
+		left: 280px;
+	}
+}
+
+@keyframes translate4 {
+	0% {
+
+		left: 120%;
+	}
+
+	100% {
+		left: 420px;
+	}
+}
