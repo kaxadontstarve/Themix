@@ -127,7 +127,9 @@ ul {
   -ms-grid-rows: minmax(100px, auto) 1fr minmax(70px, auto);
   -ms-grid-columns: 1fr;
       grid-template: minmax(100px, auto) 1fr minmax(70px, auto)/1fr;
-      grid-template-areas: "header" "main" "footer";
+      grid-template-areas: "header"
+ "main"
+ "footer";
 }
 
 .header {
@@ -241,7 +243,7 @@ ul {
   font-size: 20px;
 }
 
-@media (min-width: 991px) {
+@media (max-width: 991px) {
   .sidebar {
     display: none;
   }
