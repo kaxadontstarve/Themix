@@ -327,9 +327,6 @@ ul {
   .header__list li:last-child {
     border: none;
   }
-  body {
-    overflow: hidden;
-  }
   .header__burger {
     position: relative;
   }
