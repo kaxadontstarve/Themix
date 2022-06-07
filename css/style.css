@@ -333,17 +333,21 @@ ul {
   .header__menu {
     position: absolute;
     top: 90px;
-    right: -570px;
     background-color: #15afaf;
     min-width: 300px;
     padding: 30px;
     text-align: right;
+    opacity: 0;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    right: 10px;
   }
   .header__menu.active {
     top: 90px;
     right: 10px;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
   .header__burger {
     width: 30px;
